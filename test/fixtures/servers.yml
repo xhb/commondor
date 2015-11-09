@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  svname: MyString
+  svip: MyString
+  svroot: MyString
+  svpasswd: MyString
+  svpkey: MyString
+  svdec: MyString
+
+two:
+  svname: MyString
+  svip: MyString
+  svroot: MyString
+  svpasswd: MyString
+  svpkey: MyString
+  svdec: MyString

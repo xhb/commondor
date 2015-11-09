@@ -1,0 +1,66 @@
+<%= form_for @server, :html => { :class => "form-horizontal server" } do |f| %>
+
+    <% if @server.errors.any? %>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@server.errors.count, "error") %> prohibited this server from being saved:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @server.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="control-group">
+    <%= f.label :svname, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :svname, :class => 'form-control' %>
+    </div>
+    <%= error_span(@server[:svname]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :svip, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :svip, :class => 'form-control' %>
+    </div>
+    <%= error_span(@server[:svip]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :svroot, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :svroot, :class => 'form-control' %>
+    </div>
+    <%= error_span(@server[:svroot]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :svpasswd, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :svpasswd, :class => 'form-control' %>
+    </div>
+    <%= error_span(@server[:svpasswd]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :svpkey, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :svpkey, :class => 'form-control' %>
+    </div>
+    <%= error_span(@server[:svpkey]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :svdec, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :svdec, :class => 'form-control' %>
+    </div>
+    <%= error_span(@server[:svdec]) %>
+  </div>
+
+
+  <%= f.submit nil, :class => 'btn btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+            servers_path, :class => 'btn btn-default' %>
+
+<% end %>
