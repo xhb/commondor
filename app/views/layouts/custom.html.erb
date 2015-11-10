@@ -13,8 +13,7 @@
     <![endif]-->
 
     <%= stylesheet_link_tag    "application", media: "all" %>
-    <%= javascript_include_tag "application" %>
-    
+    <%= javascript_include_tag "application"  %>
     <!-- For third-generation iPad with high-resolution Retina display: -->
     <!-- Size should be 144 x 144 pixels -->
     <%= favicon_link_tag 'apple-touch-icon-144x144-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '144x144' %>
@@ -48,12 +47,12 @@
         <a class="navbar-brand" href="#">Commondore</a>
         <div class="navbar-collapse collapse navbar-responsive-collapse">
           <ul class="nav navbar-nav">
-            <li><%= link_to "servers", servers_path  %></li>
-            <li><%= link_to "jobs", jobs_path  %></li>
+            <li><%= link_to "servers", main_app.servers_path  %></li>
+            <li><%= link_to "jobs", main_app.jobs_path  %></li>
             <li><%= link_to "excutions", "#"  %></li>
             <li><%= link_to "plans", "#"  %></li>
             <li><%= link_to "polling", "#"  %></li>
-            <li><%= link_to "calendar", kalendar_path %></li>
+            <li><%= link_to "calendar", main_app.kalendar_path %></li>
             <li><%= link_to "admin", "#"  %></li>
             <li><%= link_to "settings", "#"  %></li>
           </ul>

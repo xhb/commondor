@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
+  
+  get '/kalendar' => 'kalendar#index', as: :kalendar
+  mount FullcalendarEngine::Engine => "/calendar"
   resources :jobs
-
   resources :servers
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -9,6 +11,8 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'servers#index'
 
+  
+  
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
